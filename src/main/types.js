@@ -15,3 +15,16 @@ export type TraktMovieHistEntityType = {
     "movie": TraktMovieEntityType,
 };
 export type TraktMovieHistoryType = Array<TraktMovieHistEntityType>;
+export type LetterboxdHistoryEntityType = {
+    LetterboxdURI: ?string,
+    tmdbID: ?number,
+    imdbID: ?string,
+    Title: string,
+    Year: number,
+    Directors: ?string,
+    WatchedDate: ?string,
+    Rating: ?number,
+    Rating10: ?number,
+    Tags: ?string,
+    Review: ?string,
+};
