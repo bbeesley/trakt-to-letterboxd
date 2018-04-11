@@ -8,6 +8,3 @@ dist/
 suppress_type=$FlowIssue
 suppress_comment= \\(.\\|\n\\)*\\$FlowIssue
 module.name_mapper='.*\(.css\)' -> 'empty/object'
-
-[lints]
-deprecated-declare-exports=off
