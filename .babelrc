@@ -1,0 +1,26 @@
+{
+    "presets": [
+        [
+            "env",
+            {
+                "targets": {
+                    "node": "8.9.1"
+                },
+                "useBuiltIns": true
+            }
+        ],
+        "stage-0"
+    ],
+    "plugins": [
+        "transform-runtime",
+        "transform-flow-strip-types"
+    ],
+    "env": {
+        "test": {
+            "plugins": [
+                "rewire"
+            ]
+        }
+    },
+    "sourceMaps": true
+}

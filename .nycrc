@@ -1,0 +1,28 @@
+{
+  "lines": 70,
+  "statements": 70,
+  "functions": 70,
+  "branches": 70,
+  "include": [
+    "src/main/**/*.js"
+  ],
+  "exclude": [
+    "flow-typed/**",
+    "src/main/**/index.js"
+  ],
+  "reporter": [
+    "html",
+    "text"
+  ],
+  "require": [
+    "babel-register"
+  ],
+  "extension": [
+    ".js"
+  ],
+  "sourceMap": true,
+  "cache": false,
+  "all": true,
+  "check-coverage": true,
+  "report-dir": "./coverage"
+}
