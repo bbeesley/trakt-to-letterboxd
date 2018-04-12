@@ -2,6 +2,13 @@
 import yargs from 'yargs';
 import { traktHistoryToCsv } from './main';
 
+
+/**
+ * Nicely formatted command line arguments using yargs
+ * @type {Object}   argv            All arguments
+ * @type {string}   argv.fileName   Filename to write to
+ * @type {string}   argv.userName   Username to get history for
+ */
 const { argv } = yargs
     .option('userName', {
         alias: 'u',

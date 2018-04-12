@@ -1,6 +1,11 @@
 import CsvBuilder from 'csv-builder';
 import { format } from 'fecha';
 
+
+/**
+ * Schema for the output csv.
+ * Based on https://letterboxd.com/about/importing-data/
+ */
 const schema = {
     headers: [
         'LetterboxdURI',
@@ -23,6 +28,12 @@ const schema = {
     },
 };
 
+
+/**
+ * The instance of CsvBuilder we'll use to export the data.
+ * We need to remap the format of the last watched date to YYYY-MM-DD
+ * to comply with letterboxd's formatting
+ */
 const builder = new CsvBuilder(schema)
     .virtual('WatchedDate', (history) => format(new Date(history.last_watched_at), 'YYYY-MM-DD'));
 

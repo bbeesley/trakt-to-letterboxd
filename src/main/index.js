@@ -8,6 +8,14 @@ export type PropsType = {
     fileName: string,
 };
 
+
+/**
+ * Export a trakt user's history to csv to be uploaded to letterboxd
+ * @param {Object}  props           Properties passed from argv
+ * @param {string}  props.userName  The user whose data you want to export
+ * @param {string}  props.fileName  The name of the file to output to
+ * @return {Promise<void>}          We dont return anything
+ */
 export const traktHistoryToCsv = async ({ userName, fileName }: PropsType) => {
     try {
         const movieList = await getData(userName);
