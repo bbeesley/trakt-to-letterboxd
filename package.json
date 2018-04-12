@@ -20,7 +20,7 @@
     "compile": "BABEL_ENV=production babel src --out-dir dist --copy-files --source-maps --extensions \".js\" --ignore \"src/test/**\" && chmod +x dist/ttl.js",
     "postcompile": "./node_modules/.bin/documentation readme src/main/index.js -s \"API\" --github",
     "lint": "./node_modules/.bin/eslint src/**  --fix",
-    "mocha": "IS_WEBPACK=true BABEL_ENV=test # nyc mocha --require ./src/test/index.js 'src/test/**/*.test.js'",
+    "mocha": "IS_WEBPACK=true BABEL_ENV=test nyc mocha --require ./src/test/index.js 'src/test/**/*.test.js'",
     "flow": "flow",
     "flow:delete": "find ./dist/main -name *.flow -delete || :",
     "flow:generate": "flow-copy-source -v ./src/main ./dist/main",
@@ -29,6 +29,7 @@
     "test": "BABEL_ENV=test yarn mocha"
   },
   "devDependencies": {
+    "arrow-mocha": "^1.0.1",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^7.0.0",
