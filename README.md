@@ -6,6 +6,9 @@ A package to migrate your trakt movie history to letterboxd. Currently letterbox
 
 ## Usage
 
+### Note
+I haven't added unit tests and published to npm yet, bear with me. If you cant wait to use it then just clone the repo, run `yarn && yarn compile` in the repo directory, then run `./dist/ttl.js --help`.
+
 The easiest way to use this currently is with npx. You can install that globally with `yarn global add npx` or `npm i -g npx`. Once you have that, just run:
 
 ```sh
