@@ -49,6 +49,11 @@ describe('index.js', () => {
             expect(t.getData.called).to.be.true;
             expect(t.getData.args[0][0]).to.be.equal(t.props.userName);
         });
+        it('passes fileName to createWriteStream', async (t) => {
+            await (traktHistoryToCsv({ userName: 'foo', fileName: 'bar.csv' }));
+            expect(t.fs.createWriteStream.called).to.be.true;
+            expect(t.fs.createWriteStream.args[0][0]).to.be.equal('bar.csv');
+        });
         it('ensures fileName has a .csv extension and passes it to createWriteStream', async (t) => {
             await (traktHistoryToCsv(t.props));
             expect(t.fs.createWriteStream.called).to.be.true;

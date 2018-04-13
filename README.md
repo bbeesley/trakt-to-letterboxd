@@ -33,7 +33,7 @@ where username is the user whose data you want to export, and filename is the na
 
 ### traktHistoryToCsv
 
-[src/main/index.js:19-28](https://github.com/bbeesley/trakt-to-letterboxd/blob/18968ba4f5bda372b54c6ed65dee12d5783708e1/src/main/index.js#L19-L28 "Source code on GitHub")
+[src/main/index.js:19-28](https://github.com/bbeesley/trakt-to-letterboxd/blob/964616a4bf125e8669e122775cf07a342ab8b83e/src/main/index.js#L19-L28 "Source code on GitHub")
 
 Export a trakt user's history to csv to be uploaded to letterboxd
 
@@ -47,19 +47,19 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 ### headers
 
-[src/main/fetcher.js:10-14](https://github.com/bbeesley/trakt-to-letterboxd/blob/18968ba4f5bda372b54c6ed65dee12d5783708e1/src/main/fetcher.js#L10-L14 "Source code on GitHub")
+[src/main/fetcher.js:10-14](https://github.com/bbeesley/trakt-to-letterboxd/blob/964616a4bf125e8669e122775cf07a342ab8b83e/src/main/fetcher.js#L10-L14 "Source code on GitHub")
 
 HTTP headers to send with our request to trakt's api
 
 ### options
 
-[src/main/fetcher.js:20-22](https://github.com/bbeesley/trakt-to-letterboxd/blob/18968ba4f5bda372b54c6ed65dee12d5783708e1/src/main/fetcher.js#L20-L22 "Source code on GitHub")
+[src/main/fetcher.js:20-22](https://github.com/bbeesley/trakt-to-letterboxd/blob/964616a4bf125e8669e122775cf07a342ab8b83e/src/main/fetcher.js#L20-L22 "Source code on GitHub")
 
 The fetch options object (only really needs headers)
 
 ### fetchMovies
 
-[src/main/fetcher.js:30-41](https://github.com/bbeesley/trakt-to-letterboxd/blob/18968ba4f5bda372b54c6ed65dee12d5783708e1/src/main/fetcher.js#L30-L41 "Source code on GitHub")
+[src/main/fetcher.js:30-41](https://github.com/bbeesley/trakt-to-letterboxd/blob/964616a4bf125e8669e122775cf07a342ab8b83e/src/main/fetcher.js#L30-L41 "Source code on GitHub")
 
 Fetches the user's history data from the trakt api
 
@@ -71,14 +71,14 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 ### schema
 
-[src/main/exporter.js:9-29](https://github.com/bbeesley/trakt-to-letterboxd/blob/18968ba4f5bda372b54c6ed65dee12d5783708e1/src/main/exporter.js#L9-L29 "Source code on GitHub")
+[src/main/exporter.js:9-29](https://github.com/bbeesley/trakt-to-letterboxd/blob/964616a4bf125e8669e122775cf07a342ab8b83e/src/main/exporter.js#L9-L29 "Source code on GitHub")
 
 Schema for the output csv.
 Based on <https://letterboxd.com/about/importing-data/>
 
 ### builder
 
-[src/main/exporter.js:37-38](https://github.com/bbeesley/trakt-to-letterboxd/blob/18968ba4f5bda372b54c6ed65dee12d5783708e1/src/main/exporter.js#L37-L38 "Source code on GitHub")
+[src/main/exporter.js:37-38](https://github.com/bbeesley/trakt-to-letterboxd/blob/964616a4bf125e8669e122775cf07a342ab8b83e/src/main/exporter.js#L37-L38 "Source code on GitHub")
 
 The instance of CsvBuilder we'll use to export the data.
 We need to remap the format of the last watched date to YYYY-MM-DD
