@@ -1,0 +1,17 @@
+{
+    "env": {
+        "mocha": true
+    },
+    "globals": {
+        "$": true,
+        "$$": true,
+        "browser": true
+    },
+    "rules": {
+        "no-underscore-dangle": 0,
+        "no-param-reassign": ["error", { "props": false }],
+        "no-unused-expressions": 0,
+        "import/no-extraneous-dependencies": 0,
+        "import/no-unresolved": 0
+    }
+}
