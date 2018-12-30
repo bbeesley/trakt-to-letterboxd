@@ -24,10 +24,14 @@ where username is the user whose data you want to export, and filename is the na
 
 -   [traktHistoryToCsv](#trakthistorytocsv)
     -   [Parameters](#parameters)
+-   [traktWatchlistToCsv](#traktwatchlisttocsv)
+    -   [Parameters](#parameters-1)
 -   [headers](#headers)
 -   [options](#options)
 -   [fetchMovies](#fetchmovies)
-    -   [Parameters](#parameters-1)
+    -   [Parameters](#parameters-2)
+-   [fetchWatchlist](#fetchwatchlist)
+    -   [Parameters](#parameters-3)
 -   [schema](#schema)
 -   [builder](#builder)
 
@@ -36,6 +40,20 @@ where username is the user whose data you want to export, and filename is the na
 [src/main/index.js:18-27](https://github.com/bbeesley/trakt-to-letterboxd/blob/dde7f14eea2497c1a4a17de702dc475dccb859b0/src/main/index.js#L18-L27 "Source code on GitHub")
 
 Export a trakt user's history to csv to be uploaded to letterboxd
+
+#### Parameters
+
+-   `props` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Properties passed from argv
+    -   `props.userName` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The user whose data you want to export
+    -   `props.fileName` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The name of the file to output to
+
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;void>** We dont return anything
+
+### traktWatchlistToCsv
+
+[src/main/index.js:38-47](https://github.com/frm/trakt-to-letterboxd/blob/b1e1a6d7b028153d837ab522721a083bc5158a5f/src/main/index.js#L38-L47 "Source code on GitHub")
+
+Export a trakt user's watchlist to csv to be uploaded to letterboxd
 
 #### Parameters
 
@@ -68,6 +86,18 @@ Fetches the user's history data from the trakt api
 -   `user` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The username we're getting data for
 
 Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;TraktMovieHistoryType>** Promise that resolves to trakt history array
+
+### fetchWatchlist
+
+[src/main/fetcher.js:48-59](https://github.com/frm/trakt-to-letterboxd/blob/b1e1a6d7b028153d837ab522721a083bc5158a5f/src/main/fetcher.js#L48-L59 "Source code on GitHub")
+
+Fetches the user's watchlist data from the trakt api
+
+#### Parameters
+
+-   `user` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The username we're getting data for
+
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;TraktMovieWatchlistType>** Promise that resolves to trakt watchlist array
 
 ### schema
 
