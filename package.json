@@ -13,7 +13,7 @@
     "dist"
   ],
   "engines": {
-    "node": ">=6"
+    "node": ">=8.10"
   },
   "scripts": {
     "clean": "rm -rf dist",
