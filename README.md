@@ -1,5 +1,6 @@
 # trakt-to-letterboxd
-[![Build Status](https://travis-ci.org/bbeesley/trakt-to-letterboxd.svg?branch=master)](https://travis-ci.org/bbeesley/trakt-to-letterboxd)
+
+[![Build Status](https://travis-ci.com/bbeesley/trakt-to-letterboxd.svg?branch=master)](https://travis-ci.org/bbeesley/trakt-to-letterboxd)
 
 ## Description
 
@@ -22,19 +23,21 @@ where username is the user whose data you want to export, and filename is the na
 #### Table of Contents
 
 -   [traktHistoryToCsv](#trakthistorytocsv)
+    -   [Parameters](#parameters)
 -   [headers](#headers)
 -   [options](#options)
 -   [fetchMovies](#fetchmovies)
+    -   [Parameters](#parameters-1)
 -   [schema](#schema)
 -   [builder](#builder)
 
 ### traktHistoryToCsv
 
-[src/main/index.js:19-28](https://github.com/bbeesley/trakt-to-letterboxd/blob/964616a4bf125e8669e122775cf07a342ab8b83e/src/main/index.js#L19-L28 "Source code on GitHub")
+[src/main/index.js:19-28](https://git@github.com/:bbeesley/trakt-to-letterboxd/blob/840ef3805584540a9a9b51e894add002b9f9f863/src/main/index.js#L19-L28 "Source code on GitHub")
 
 Export a trakt user's history to csv to be uploaded to letterboxd
 
-**Parameters**
+#### Parameters
 
 -   `props` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Properties passed from argv
     -   `props.userName` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The user whose data you want to export
@@ -44,23 +47,23 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 ### headers
 
-[src/main/fetcher.js:10-14](https://github.com/bbeesley/trakt-to-letterboxd/blob/964616a4bf125e8669e122775cf07a342ab8b83e/src/main/fetcher.js#L10-L14 "Source code on GitHub")
+[src/main/fetcher.js:10-14](https://git@github.com/:bbeesley/trakt-to-letterboxd/blob/840ef3805584540a9a9b51e894add002b9f9f863/src/main/fetcher.js#L10-L14 "Source code on GitHub")
 
 HTTP headers to send with our request to trakt's api
 
 ### options
 
-[src/main/fetcher.js:20-22](https://github.com/bbeesley/trakt-to-letterboxd/blob/964616a4bf125e8669e122775cf07a342ab8b83e/src/main/fetcher.js#L20-L22 "Source code on GitHub")
+[src/main/fetcher.js:20-22](https://git@github.com/:bbeesley/trakt-to-letterboxd/blob/840ef3805584540a9a9b51e894add002b9f9f863/src/main/fetcher.js#L20-L22 "Source code on GitHub")
 
 The fetch options object (only really needs headers)
 
 ### fetchMovies
 
-[src/main/fetcher.js:30-41](https://github.com/bbeesley/trakt-to-letterboxd/blob/964616a4bf125e8669e122775cf07a342ab8b83e/src/main/fetcher.js#L30-L41 "Source code on GitHub")
+[src/main/fetcher.js:30-41](https://git@github.com/:bbeesley/trakt-to-letterboxd/blob/840ef3805584540a9a9b51e894add002b9f9f863/src/main/fetcher.js#L30-L41 "Source code on GitHub")
 
 Fetches the user's history data from the trakt api
 
-**Parameters**
+#### Parameters
 
 -   `user` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The username we're getting data for
 
@@ -68,14 +71,14 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 ### schema
 
-[src/main/exporter.js:9-29](https://github.com/bbeesley/trakt-to-letterboxd/blob/964616a4bf125e8669e122775cf07a342ab8b83e/src/main/exporter.js#L9-L29 "Source code on GitHub")
+[src/main/exporter.js:9-29](https://git@github.com/:bbeesley/trakt-to-letterboxd/blob/840ef3805584540a9a9b51e894add002b9f9f863/src/main/exporter.js#L9-L29 "Source code on GitHub")
 
 Schema for the output csv.
 Based on <https://letterboxd.com/about/importing-data/>
 
 ### builder
 
-[src/main/exporter.js:37-38](https://github.com/bbeesley/trakt-to-letterboxd/blob/964616a4bf125e8669e122775cf07a342ab8b83e/src/main/exporter.js#L37-L38 "Source code on GitHub")
+[src/main/exporter.js:37-38](https://git@github.com/:bbeesley/trakt-to-letterboxd/blob/840ef3805584540a9a9b51e894add002b9f9f863/src/main/exporter.js#L37-L38 "Source code on GitHub")
 
 The instance of CsvBuilder we'll use to export the data.
 We need to remap the format of the last watched date to YYYY-MM-DD

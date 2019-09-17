@@ -1,3 +1,18 @@
 language: node_js
+
 node_js:
-  - "node"
+  - "6"
+  - "8"
+  - "10"
+  - "12"
+
+jobs:
+  include:
+    - stage: release
+      node_js: "7"
+      deploy:
+        provider: script
+        skip_cleanup: true
+        on:
+          branch: master
+        script: npm run release
