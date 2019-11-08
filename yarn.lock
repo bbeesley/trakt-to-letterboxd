@@ -4537,8 +4537,8 @@ mkdirp@0.5.1, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1:
     minimist "0.0.8"
 
 mocha-sinon@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/mocha-sinon/-/mocha-sinon-2.0.0.tgz#723a9310e7d737d7b77c7a66821237425b032d48"
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/mocha-sinon/-/mocha-sinon-2.1.0.tgz#61e92727e577bee44cac6f32162dcec33c1301e5"
 
 mocha@^5.0.5:
   version "5.0.5"
