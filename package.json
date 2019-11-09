@@ -29,7 +29,7 @@
     "posttest": "npm run compile && npm run flow:generate",
     "test": "BABEL_ENV=test npm run mocha",
     "prerelease": "npm run compile",
-    "release": "semantic-release --debug --repository-url https://github.com/bbeesley/trakt-to-letterboxd.git/"
+    "release": "semantic-release --debug"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.0",
