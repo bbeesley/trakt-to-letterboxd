@@ -30,14 +30,14 @@ const defaults = {
  * @param   {TraktMovieHistEntityType}  movie   A trackt movie history entity
  * @return  {LetterboxdHistoryEntityType}       A letterboxd movie history entity
  */
-const mapTraktToLetterboxd = (movie: TraktMovieHistEntityType): LetterboxdHistoryEntityType =>
-    Object.assign({}, defaults, {
-        tmdbID: movie.movie.ids.tmdb,
-        imdbID: movie.movie.ids.imdb,
-        Title: movie.movie.title,
-        Year: movie.movie.year,
-        WatchedDate: format(new Date(movie.last_watched_at), 'YYYY-MM-DD'),
-    });
+const mapTraktToLetterboxd = (movie: TraktMovieHistEntityType): LetterboxdHistoryEntityType => ({
+    ...defaults,
+    tmdbID: movie.movie.ids.tmdb,
+    imdbID: movie.movie.ids.imdb,
+    Title: movie.movie.title,
+    Year: movie.movie.year,
+    WatchedDate: format(new Date(movie.last_watched_at), 'YYYY-MM-DD'),
+});
 
 
 /**
@@ -45,7 +45,6 @@ const mapTraktToLetterboxd = (movie: TraktMovieHistEntityType): LetterboxdHistor
  * @param   {Array<TraktMovieHistEntityType>}   movieList   Trakt History
  * @return  {Array<LetterboxdHistoryEntityType>}            letterboxd history
  */
-const mapper = (movieList: TraktMovieHistoryType): Array<LetterboxdHistoryEntityType> =>
-    movieList.map(mapTraktToLetterboxd);
+const mapper = (movieList: TraktMovieHistoryType): Array<LetterboxdHistoryEntityType> => movieList.map(mapTraktToLetterboxd);
 
 export default mapper;

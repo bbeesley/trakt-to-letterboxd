@@ -1,8 +1,8 @@
 {
-  "lines": 85,
-  "statements": 85,
-  "functions": 85,
-  "branches": 85,
+  "lines": 60,
+  "statements": 60,
+  "functions": 45,
+  "branches": 42,
   "include": [
     "src/main/**/*.js"
   ],
@@ -14,12 +14,13 @@
     "text"
   ],
   "require": [
-    "babel-register"
+    "@babel/register"
   ],
   "extension": [
     ".js"
   ],
-  "sourceMap": true,
+  "sourceMap": false,
+  "instrument": false,
   "cache": false,
   "all": true,
   "check-coverage": true,

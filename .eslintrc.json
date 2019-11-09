@@ -36,7 +36,7 @@
     "complexity": [2, 6],
     "indent": [2, 4],
     "no-console": [0],
-    "max-len": [2, 120],
+    "max-len": [2, 140],
     "spaced-comment": [0],
     "import/prefer-default-export": [0],
     "import/extensions": ["error", { "js": "never", "json": "always" }],

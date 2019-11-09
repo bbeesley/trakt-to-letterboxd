@@ -53,7 +53,7 @@ export default [
             },
             "title": "McLaren"
         },
-        "last_watched_at": "2017-09-05T23:36:06.000Z",
+        "last_watched_at": "2017-09-05T12:36:06.000Z",
         "plays": 1
     },
 ];
