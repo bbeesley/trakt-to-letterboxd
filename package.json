@@ -125,7 +125,8 @@
         {
           "assets": [
             "package.json",
-            "CHANGELOG.md"
+            "CHANGELOG.md",
+            "README.md"
           ]
         }
       ]
