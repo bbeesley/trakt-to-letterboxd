@@ -18,7 +18,7 @@ jobs:
       - run: npm ci
 
       - run: git fetch --tags
-      - run: npx commitlint --from $(git describe --abbrev=0 --tags)
+      # - run: npx commitlint --from $(git describe --abbrev=0 --tags)
 
       - save_cache:
           paths:
