@@ -19,7 +19,8 @@
   "extension": [
     ".js"
   ],
-  "sourceMap": true,
+  "sourceMap": false,
+  "instrument": false,
   "cache": false,
   "all": true,
   "check-coverage": true,

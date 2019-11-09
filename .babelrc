@@ -19,7 +19,8 @@
     "env": {
         "test": {
             "plugins": [
-                "babel-plugin-rewire"
+                "babel-plugin-rewire",
+                "istanbul"
             ]
         }
     },
