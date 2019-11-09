@@ -1,3 +1,5 @@
+## [1.0.4](https://github.com/bbeesley/trakt-to-letterboxd/compare/v1.0.3...v1.0.4) (2019-11-09)
+
 ## [1.0.3](https://github.com/bbeesley/trakt-to-letterboxd/compare/v1.0.2...v1.0.3) (2019-11-09)
 
 
