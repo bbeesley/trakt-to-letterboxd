@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  codecov: codecov/codecov@1.0.2
+  codecov: codecov/codecov@1.0.5
 jobs:
   build:
     docker:
@@ -28,7 +28,7 @@ jobs:
       - run: npm test
 
       - codecov/upload:
-          file: {{ coverage/lcov.info }}
+          file: coverage/lcov.info
 
       - persist_to_workspace:
           root: ~/repo
