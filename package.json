@@ -86,7 +86,7 @@
     "csv-builder": "^1.0.1",
     "fecha": "^3.0.3",
     "node-fetch": "^2.6.0",
-    "yargs": "^14.2.0"
+    "yargs": "^15.0.1"
   },
   "release": {
     "branch": "master",
