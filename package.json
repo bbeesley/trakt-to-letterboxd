@@ -53,7 +53,7 @@
     "@semantic-release/release-notes-generator": "^7.3.2",
     "arrow-mocha": "^1.0.1",
     "babel-eslint": "^10.0.3",
-    "babel-plugin-istanbul": "^5.2.0",
+    "babel-plugin-istanbul": "^6.0.0",
     "babel-plugin-rewire": "^1.2.0",
     "chai": "^4.2.0",
     "conventional-changelog-angular": "^5.0.5",
