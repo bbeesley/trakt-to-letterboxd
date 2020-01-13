@@ -69,7 +69,7 @@
     "fetch-mock": "^8.0.0",
     "flow-bin": "^0.115.0",
     "flow-copy-source": "^2.0.8",
-    "husky": "^3.0.9",
+    "husky": "^4.0.7",
     "ignore-styles": "^5.0.1",
     "mocha": "^7.0.0",
     "mocha-sinon": "^2.1.0",
