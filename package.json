@@ -84,7 +84,7 @@
   "dependencies": {
     "babel-runtime": "^6.26.0",
     "csv-builder": "^1.0.1",
-    "fecha": "^3.0.3",
+    "fecha": "^4.0.0",
     "node-fetch": "^2.6.0",
     "yargs": "^15.0.1"
   },
