@@ -4,17 +4,14 @@
             "@babel/preset-env",
             {
                 "targets": {
-                    "node": "8.10.0"
-                },
-                "corejs": 3,
-                "useBuiltIns": "usage"
+                    "node": "10.16.0"
+                }
             }
         ],
         "@babel/preset-flow"
     ],
     "plugins": [
-        "@babel/plugin-transform-flow-strip-types",
-        "@babel/plugin-transform-runtime"
+        "@babel/plugin-transform-flow-strip-types"
     ],
     "env": {
         "test": {
