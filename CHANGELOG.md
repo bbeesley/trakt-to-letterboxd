@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/bbeesley/trakt-to-letterboxd/compare/v1.0.4...v1.0.5) (2020-02-19)
+
+
+### Bug Fixes
+
+* **deps:** fix undocumented dependencies on corejs & babel runtime ([8d6717f](https://github.com/bbeesley/trakt-to-letterboxd/commit/8d6717f360cea5939f9e27bcb7d3b6e2ada4a60b)), closes [#138](https://github.com/bbeesley/trakt-to-letterboxd/issues/138)
+
 ## [1.0.4](https://github.com/bbeesley/trakt-to-letterboxd/compare/v1.0.3...v1.0.4) (2019-11-09)
 
 ## [1.0.3](https://github.com/bbeesley/trakt-to-letterboxd/compare/v1.0.2...v1.0.3) (2019-11-09)
