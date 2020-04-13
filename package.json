@@ -65,7 +65,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.16.0",
     "fetch-mock": "^9.0.0",
-    "flow-bin": "^0.121.0",
+    "flow-bin": "^0.122.0",
     "flow-copy-source": "^2.0.8",
     "husky": "^4.0.7",
     "ignore-styles": "^5.0.1",
