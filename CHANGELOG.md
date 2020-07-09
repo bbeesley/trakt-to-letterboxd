@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/bbeesley/trakt-to-letterboxd/compare/v1.0.5...v1.0.6) (2020-07-09)
+
+
+### Bug Fixes
+
+* **deps:** update all deps to patch security vulnerabilities ([6954af9](https://github.com/bbeesley/trakt-to-letterboxd/commit/6954af97e68023b463470c44771e82325315d9fc))
+
 ## [1.0.5](https://github.com/bbeesley/trakt-to-letterboxd/compare/v1.0.4...v1.0.5) (2020-02-19)
 
 
