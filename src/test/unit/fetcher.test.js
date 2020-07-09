@@ -11,7 +11,7 @@ import {
 
 describe('fetcher.js', () => {
     beforeEach((t) => {
-        t.sandbox = sinon.sandbox.create();
+        t.sandbox = sinon.createSandbox();
     });
     afterEach((t) => {
         t.sandbox.restore();

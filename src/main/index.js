@@ -8,7 +8,6 @@ export type PropsType = {
     fileName: string,
 };
 
-
 /**
  * Export a trakt user's history to csv to be uploaded to letterboxd
  * @param {Object}  props           Properties passed from argv

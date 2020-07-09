@@ -3,7 +3,6 @@ import fetch from 'node-fetch';
 import config from './config';
 import type { TraktMovieHistoryType } from './types';
 
-
 /**
  * HTTP headers to send with our request to trakt's api
  */
@@ -13,14 +12,12 @@ const headers = {
     'trakt-api-key': config.clientId,
 };
 
-
 /**
  * The fetch options object (only really needs headers)
  */
 const options = {
     headers,
 };
-
 
 /**
  * Fetches the user's history data from the trakt api

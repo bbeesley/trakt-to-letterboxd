@@ -1,7 +1,6 @@
 import CsvBuilder from 'csv-builder';
 import { format } from 'fecha';
 
-
 /**
  * Schema for the output csv.
  * Based on https://letterboxd.com/about/importing-data/
@@ -27,7 +26,6 @@ const schema = {
         Year: 'movie.year',
     },
 };
-
 
 /**
  * The instance of CsvBuilder we'll use to export the data.

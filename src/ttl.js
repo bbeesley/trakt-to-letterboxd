@@ -2,7 +2,6 @@
 import yargs from 'yargs';
 import { traktHistoryToCsv } from './main';
 
-
 /**
  * Nicely formatted command line arguments using yargs
  * @type {Object}   argv            All arguments
