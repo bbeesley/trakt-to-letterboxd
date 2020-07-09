@@ -6,7 +6,6 @@ import type {
     LetterboxdHistoryEntityType,
 } from './types';
 
-
 /**
  * Default values for letterboxd object shape
  */
@@ -24,7 +23,6 @@ const defaults = {
     Review: null,
 };
 
-
 /**
  * Maps a trakt history entry to a letterboxd history entry
  * @param   {TraktMovieHistEntityType}  movie   A trackt movie history entity
@@ -38,7 +36,6 @@ const mapTraktToLetterboxd = (movie: TraktMovieHistEntityType): LetterboxdHistor
     Year: movie.movie.year,
     WatchedDate: format(new Date(movie.last_watched_at), 'YYYY-MM-DD'),
 });
-
 
 /**
  * Maps an array of trakt history entries to an array of letterboxd history entities
