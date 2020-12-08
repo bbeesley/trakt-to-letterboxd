@@ -32,7 +32,11 @@ const schema = {
  * We need to remap the format of the last watched date to YYYY-MM-DD
  * to comply with letterboxd's formatting
  */
-const builder = new CsvBuilder(schema)
-    .virtual('WatchedDate', (history) => format(new Date(history.last_watched_at), 'YYYY-MM-DD'));
+export const builder = new CsvBuilder(schema)
+    .virtual('WatchedDate', (history) => {
+        if (history.last_watched_at) {
+            return format(new Date(history.last_watched_at), 'YYYY-MM-DD');
+        }
 
-export default builder;
+        return '';
+    });

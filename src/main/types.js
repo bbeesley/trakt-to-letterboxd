@@ -14,7 +14,13 @@ export type TraktMovieHistEntityType = {
     "last_watched_at": string,
     "movie": TraktMovieEntityType,
 };
+export type TraktMovieWatchlistEntityType = {
+    "rank": number,
+    "listed_at": string,
+    "movie": TraktMovieEntityType,
+};
 export type TraktMovieHistoryType = Array<TraktMovieHistEntityType>;
+export type TraktWatchlistType = Array<TraktMovieWatchlistEntityType>;
 export type LetterboxdHistoryEntityType = {
     LetterboxdURI: ?string,
     tmdbID: ?number,
