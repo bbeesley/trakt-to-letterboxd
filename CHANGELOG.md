@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/bbeesley/trakt-to-letterboxd/compare/v1.0.6...v1.1.0) (2020-12-10)
+
+
+### Features
+
+* add ratings and watchlist export ([7864440](https://github.com/bbeesley/trakt-to-letterboxd/commit/786444081cc1b7b15ba99f769baebbb6613befb8))
+
 ## [1.0.6](https://github.com/bbeesley/trakt-to-letterboxd/compare/v1.0.5...v1.0.6) (2020-07-09)
 
 
