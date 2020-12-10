@@ -19,12 +19,6 @@ const schema = {
         'Tags',
         'Review',
     ],
-    alias: {
-        tmdbID: 'movie.ids.tmdb',
-        imdbID: 'movie.ids.imdb',
-        Title: 'movie.title',
-        Year: 'movie.year',
-    },
 };
 
 /**
@@ -32,7 +26,6 @@ const schema = {
  * We need to remap the format of the last watched date to YYYY-MM-DD
  * to comply with letterboxd's formatting
  */
-const builder = new CsvBuilder(schema)
-    .virtual('WatchedDate', (history) => format(new Date(history.last_watched_at), 'YYYY-MM-DD'));
+const builder = new CsvBuilder(schema);
 
 export default builder;

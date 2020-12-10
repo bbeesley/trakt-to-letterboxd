@@ -15,12 +15,13 @@ const { argv } = yargs
     })
     .option('fileName', {
         alias: 'f',
-        describe: 'The name of the file you want to export to',
+        describe: 'The name of the file you want to export your history to',
     })
-    .demandOption(
-        ['userName', 'fileName'],
-        'Please provide both userName and fileName arguments',
-    )
+    .option('watchListFileName', {
+        alias: 'w',
+        describe: 'The name of the file you want to export your watchlist to',
+    })
+    .demandOption(['userName'], 'Please provide at least a username')
     .help();
 
 traktHistoryToCsv(argv)
