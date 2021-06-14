@@ -69,7 +69,7 @@
     "flow-copy-source": "^2.0.9",
     "husky": "^6.0.0",
     "ignore-styles": "^5.0.1",
-    "mocha": "^8.0.1",
+    "mocha": "^9.0.0",
     "mocha-sinon": "^2.1.2",
     "nodemon": "^2.0.4",
     "npm-check-updates": "^11.4.1",
