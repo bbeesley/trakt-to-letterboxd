@@ -57,7 +57,7 @@
     "chai": "^4.2.0",
     "conventional-changelog-angular": "^5.0.10",
     "cz-conventional-changelog": "^3.2.0",
-    "documentation": "^13.0.2",
+    "documentation": "^14.0.1",
     "eslint": "^7.4.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-flowtype": "^5.2.0",
