@@ -1,24 +1,23 @@
 import CsvBuilder from 'csv-builder';
-import { format } from 'fecha';
 
 /**
  * Schema for the output csv.
  * Based on https://letterboxd.com/about/importing-data/
  */
 const schema = {
-    headers: [
-        'LetterboxdURI',
-        'tmdbID',
-        'imdbID',
-        'Title',
-        'Year',
-        'Directors',
-        'WatchedDate',
-        'Rating',
-        'Rating10',
-        'Tags',
-        'Review',
-    ],
+  headers: [
+    'LetterboxdURI',
+    'tmdbID',
+    'imdbID',
+    'Title',
+    'Year',
+    'Directors',
+    'WatchedDate',
+    'Rating',
+    'Rating10',
+    'Tags',
+    'Review',
+  ],
 };
 
 /**
@@ -27,5 +26,4 @@ const schema = {
  * to comply with letterboxd's formatting
  */
 const builder = new CsvBuilder(schema);
-
 export default builder;
