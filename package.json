@@ -40,7 +40,7 @@
     "pretest": "run-p clean lint",
     "posttest": "npm run compile",
     "test": "BABEL_ENV=test ava",
-    "prerelease": "run-package compile documentation",
+    "prerelease": "run-p compile documentation",
     "release": "semantic-release --debug"
   },
   "devDependencies": {
