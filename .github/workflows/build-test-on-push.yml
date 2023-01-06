@@ -60,6 +60,8 @@ jobs:
         run: |
           echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> .npmrc
           cp .npmrc ~/
+      - name: install dependencies
+        run: pnpm install
       - name: publish
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
