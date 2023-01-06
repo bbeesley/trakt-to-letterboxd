@@ -20,9 +20,11 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v3
+        name: checkout
         with:
           ref: ${{ inputs.ref }}
       - uses: actions/setup-node@v3
+        name: setup node
         with:
           node-version: '18.12.1'
       - uses: pnpm/action-setup@v2
@@ -44,6 +46,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
       - uses: actions/cache@v3
+        name: setup build cache
         with:
           path: |
             node_modules

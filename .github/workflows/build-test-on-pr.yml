@@ -17,7 +17,8 @@ jobs:
     if: ${{ github.actor == 'dependabot[bot]' }}
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3v3
+        name: checkout
         with:
           ref: ${{ github.event.pull_request.head.ref }}
       - name: approve-dependabot
