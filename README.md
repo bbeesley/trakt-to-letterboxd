@@ -1,6 +1,6 @@
 # trakt-to-letterboxd
 
-[![CircleCI](https://circleci.com/gh/bbeesley/trakt-to-letterboxd/tree/master.svg?style=svg)](https://circleci.com/gh/bbeesley/trakt-to-letterboxd/tree/master) [![codecov](https://codecov.io/gh/bbeesley/trakt-to-letterboxd/branch/master/graph/badge.svg)](https://codecov.io/gh/bbeesley/trakt-to-letterboxd) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Build, Test & Publish Main](https://github.com/bbeesley/trakt-to-letterboxd/actions/workflows/build-test-on-push.yml/badge.svg?event=push)](https://github.com/bbeesley/trakt-to-letterboxd/actions/workflows/build-test-on-push.yml) [![codecov](https://codecov.io/gh/bbeesley/trakt-to-letterboxd/branch/master/graph/badge.svg)](https://codecov.io/gh/bbeesley/trakt-to-letterboxd) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 ## Description
 
@@ -40,21 +40,26 @@ npx trakt-to-letterboxd -u username -f history.csv -w watchlist.csv
 
 #### Table of Contents
 
-*   [schema](#schema)
-*   [defaults](#defaults)
-*   [headers](#headers)
-*   [traktHistoryToCsv](#trakthistorytocsv)
-    *   [Parameters](#parameters)
-*   [options](#options)
-*   [builder](#builder)
-*   [mapTraktToLetterboxd](#maptrakttoletterboxd)
-    *   [Parameters](#parameters-1)
-*   [mergeWatchedWithRatings](#mergewatchedwithratings)
-    *   [Parameters](#parameters-2)
-*   [mapper](#mapper)
-    *   [Parameters](#parameters-3)
-*   [fetchMovies](#fetchmovies)
-    *   [Parameters](#parameters-4)
+- [trakt-to-letterboxd](#trakt-to-letterboxd)
+  - [Description](#description)
+  - [Usage](#usage)
+  - [API](#api)
+      - [Table of Contents](#table-of-contents)
+    - [schema](#schema)
+    - [defaults](#defaults)
+    - [headers](#headers)
+    - [traktHistoryToCsv](#trakthistorytocsv)
+      - [Parameters](#parameters)
+    - [options](#options)
+    - [builder](#builder)
+    - [mapTraktToLetterboxd](#maptrakttoletterboxd)
+      - [Parameters](#parameters-1)
+    - [mergeWatchedWithRatings](#mergewatchedwithratings)
+      - [Parameters](#parameters-2)
+    - [mapper](#mapper)
+      - [Parameters](#parameters-3)
+    - [fetchMovies](#fetchmovies)
+      - [Parameters](#parameters-4)
 
 ### schema
 
