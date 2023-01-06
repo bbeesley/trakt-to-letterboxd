@@ -1,3 +1,15 @@
+## [1.1.1](https://github.com/bbeesley/trakt-to-letterboxd/compare/v1.1.0...v1.1.1) (2023-01-06)
+
+
+### Code Refactoring
+
+* migrate from flow to typescript ([283a41c](https://github.com/bbeesley/trakt-to-letterboxd/commit/283a41c2d24fc7948817aaa2f4c24fcc292d9d3c))
+
+
+### BREAKING CHANGES
+
+* Versions of node prior to 16.15 are no longer supported.
+
 # [1.1.0](https://github.com/bbeesley/trakt-to-letterboxd/compare/v1.0.6...v1.1.0) (2020-12-10)
 
 

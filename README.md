@@ -58,26 +58,26 @@ npx trakt-to-letterboxd -u username -f history.csv -w watchlist.csv
 
 ### schema
 
-[src/main/exporter.ts:7-21](https://github.com/bbeesley/trakt-to-letterboxd/blob/98943fa4e5532378d7a508d8def66af182ff8d15/src/main/exporter.ts#L7-L21 "Source code on GitHub")
+[src/main/exporter.ts:7-21](https://github.com/bbeesley/trakt-to-letterboxd/blob/357568106da2624a752c4853e96816457d8b6da4/src/main/exporter.ts#L7-L21 "Source code on GitHub")
 
 Schema for the output csv.
 Based on <https://letterboxd.com/about/importing-data/>
 
 ### defaults
 
-[src/main/mapper.ts:11-23](https://github.com/bbeesley/trakt-to-letterboxd/blob/98943fa4e5532378d7a508d8def66af182ff8d15/src/main/mapper.ts#L11-L23 "Source code on GitHub")
+[src/main/mapper.ts:11-23](https://github.com/bbeesley/trakt-to-letterboxd/blob/357568106da2624a752c4853e96816457d8b6da4/src/main/mapper.ts#L11-L23 "Source code on GitHub")
 
 Default values for letterboxd object shape
 
 ### headers
 
-[src/main/fetcher.ts:14-18](https://github.com/bbeesley/trakt-to-letterboxd/blob/98943fa4e5532378d7a508d8def66af182ff8d15/src/main/fetcher.ts#L14-L18 "Source code on GitHub")
+[src/main/fetcher.ts:14-18](https://github.com/bbeesley/trakt-to-letterboxd/blob/357568106da2624a752c4853e96816457d8b6da4/src/main/fetcher.ts#L14-L18 "Source code on GitHub")
 
 HTTP headers to send with our request to trakt's api
 
 ### traktHistoryToCsv
 
-[src/main/index.ts:20-54](https://github.com/bbeesley/trakt-to-letterboxd/blob/98943fa4e5532378d7a508d8def66af182ff8d15/src/main/index.ts#L20-L54 "Source code on GitHub")
+[src/main/index.ts:20-54](https://github.com/bbeesley/trakt-to-letterboxd/blob/357568106da2624a752c4853e96816457d8b6da4/src/main/index.ts#L20-L54 "Source code on GitHub")
 
 Export a trakt user's history to csv to be uploaded to letterboxd
 
@@ -93,13 +93,13 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 ### options
 
-[src/main/fetcher.ts:23-25](https://github.com/bbeesley/trakt-to-letterboxd/blob/98943fa4e5532378d7a508d8def66af182ff8d15/src/main/fetcher.ts#L23-L25 "Source code on GitHub")
+[src/main/fetcher.ts:23-25](https://github.com/bbeesley/trakt-to-letterboxd/blob/357568106da2624a752c4853e96816457d8b6da4/src/main/fetcher.ts#L23-L25 "Source code on GitHub")
 
 The fetch options object (only really needs headers)
 
 ### builder
 
-[src/main/exporter.ts:28-28](https://github.com/bbeesley/trakt-to-letterboxd/blob/98943fa4e5532378d7a508d8def66af182ff8d15/src/main/exporter.ts#L28-L28 "Source code on GitHub")
+[src/main/exporter.ts:28-28](https://github.com/bbeesley/trakt-to-letterboxd/blob/357568106da2624a752c4853e96816457d8b6da4/src/main/exporter.ts#L28-L28 "Source code on GitHub")
 
 The instance of CsvBuilder we'll use to export the data.
 We need to remap the format of the last watched date to YYYY-MM-DD
@@ -107,7 +107,7 @@ to comply with letterboxd's formatting
 
 ### mapTraktToLetterboxd
 
-[src/main/mapper.ts:31-44](https://github.com/bbeesley/trakt-to-letterboxd/blob/98943fa4e5532378d7a508d8def66af182ff8d15/src/main/mapper.ts#L31-L44 "Source code on GitHub")
+[src/main/mapper.ts:31-44](https://github.com/bbeesley/trakt-to-letterboxd/blob/357568106da2624a752c4853e96816457d8b6da4/src/main/mapper.ts#L31-L44 "Source code on GitHub")
 
 Maps a trakt history entry to a letterboxd history entry
 
@@ -120,7 +120,7 @@ Returns **LetterboxdHistoryEntityType** A letterboxd movie history entity
 
 ### mergeWatchedWithRatings
 
-[src/main/fetcher.ts:34-55](https://github.com/bbeesley/trakt-to-letterboxd/blob/98943fa4e5532378d7a508d8def66af182ff8d15/src/main/fetcher.ts#L34-L55 "Source code on GitHub")
+[src/main/fetcher.ts:34-55](https://github.com/bbeesley/trakt-to-letterboxd/blob/357568106da2624a752c4853e96816457d8b6da4/src/main/fetcher.ts#L34-L55 "Source code on GitHub")
 
 Fetch the ratings of a user and merge them with the movie history based on the movie's Trakt ID
 
@@ -133,7 +133,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 ### mapper
 
-[src/main/mapper.ts:52-58](https://github.com/bbeesley/trakt-to-letterboxd/blob/98943fa4e5532378d7a508d8def66af182ff8d15/src/main/mapper.ts#L52-L58 "Source code on GitHub")
+[src/main/mapper.ts:52-58](https://github.com/bbeesley/trakt-to-letterboxd/blob/357568106da2624a752c4853e96816457d8b6da4/src/main/mapper.ts#L52-L58 "Source code on GitHub")
 
 Maps an array of trakt history entries to an array of letterboxd history entities
 
@@ -146,7 +146,7 @@ Returns **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Gl
 
 ### fetchMovies
 
-[src/main/fetcher.ts:63-88](https://github.com/bbeesley/trakt-to-letterboxd/blob/98943fa4e5532378d7a508d8def66af182ff8d15/src/main/fetcher.ts#L63-L88 "Source code on GitHub")
+[src/main/fetcher.ts:63-88](https://github.com/bbeesley/trakt-to-letterboxd/blob/357568106da2624a752c4853e96816457d8b6da4/src/main/fetcher.ts#L63-L88 "Source code on GitHub")
 
 Fetches the user's history data from the trakt api
 
