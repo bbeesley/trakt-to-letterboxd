@@ -1,15 +1,7 @@
-import sinon from 'sinon';
+import test from 'ava';
 import CsvBuilder from 'csv-builder';
-import builder from '../../main/exporter';
-import {
-    expect,
-    it,
-} from './helpers';
+import builder from '../../main/exporter.js';
 
-describe('exporter.js', () => {
-    describe('builder', () => {
-        it('is an instanceof CsvBuilder', () => {
-            expect(builder).to.be.an.instanceof(CsvBuilder);
-        });
-    });
+test('exporter.js - builder - is an instanceof CsvBuilder', (t) => {
+  t.true(builder instanceof CsvBuilder);
 });

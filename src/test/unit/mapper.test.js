@@ -1,26 +1,18 @@
-import sinon from 'sinon';
-import mapper, { __RewireAPI__ as RewireAPI } from '../../main/mapper';
-import {
-    expect, it, beforeEach, afterEach,
-} from './helpers';
-import traktMergedData from '../mocks/traktMergedData';
-import expected from '../mocks/letterboxdData';
+import test from 'ava';
+import mapper from '../../main/mapper.js';
+import traktMergedData from '../mocks/trakt-merged-data.js';
+import expected from '../mocks/letterboxd-data.js';
 
-describe('mapper.js', () => {
-    describe('mapper', () => {
-        it('converts an array of trakt data to letterboxd data', () => {
-            const res = mapper(traktMergedData);
-            expect(res).to.deep.equal(expected);
-        });
-
-        it('converts an array of trakt watchlist data to letterboxd data', () => {
-            const res = mapper(traktMergedData, true);
-            expect(res).to.deep.equal(
-                expected.map((val) => {
-                    val.WatchedDate = undefined;
-                    return val;
-                }),
-            );
-        });
-    });
+test('mapper - converts an array of trakt data to letterboxd data', (t) => {
+  const response = mapper(traktMergedData);
+  t.deepEqual(response, expected);
+});
+test('mapper - converts an array of trakt watchlist data to letterboxd data', (t) => {
+  const response = mapper(traktMergedData, true);
+  t.deepEqual(
+    response,
+    expected.map((value) => {
+      return { ...value, WatchedDate: null };
+    }),
+  );
 });

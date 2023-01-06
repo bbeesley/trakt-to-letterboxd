@@ -1,0 +1,55 @@
+name: Build & Test Common
+on:
+  workflow_call:
+    inputs:
+      actor:
+        required: true
+        type: string
+      ref:
+        required: true
+        type: string
+      commit:
+        required: true
+        type: string
+      is_main_branch:
+        required: true
+        type: boolean
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ inputs.ref }}
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18.12.1'
+      - uses: pnpm/action-setup@v2
+        name: install pnpm
+        id: pnpm-install
+        with:
+          version: latest
+          run_install: false
+      - name: get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+      - uses: actions/cache@v3
+        name: setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+      - uses: actions/cache@v3
+        with:
+          path: |
+            node_modules
+            dist
+          key: ${{ inputs.commit }}-test
+      - name: install dependencies
+        run: pnpm install
+      - name: test
+        run: npm test

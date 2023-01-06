@@ -1,0 +1,19 @@
+{
+  "extends": "@beesley/tsconfig/npm.json",
+  "compilerOptions": {
+    "types": ["node"],
+    "declarationDir": "dist/types",
+    "outDir": "dist/esm",
+    "useUnknownInCatchVariables": false,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
+  },
+  "include": ["src/main/**/*.ts", "src/main/*.ts", "src/*.d.ts"],
+  "exclude": ["src/*.test.*", "src/**/*.test.*", "src/test/*.ts", "src/test/**/*.ts"],
+  "ts-node": {
+    "transpileOnly": true,
+    "files": true,
+    "include": ["src/main/**/*.ts", "src/main/*.ts", "src/*.d.ts", "src/*.js"],
+    "exclude": [],
+  }
+}

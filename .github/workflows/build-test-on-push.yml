@@ -1,0 +1,68 @@
+name: Build, Test & Publish Main
+on:
+  push:
+concurrency: ci-${{ github.ref}}-${{ github.event_name }}
+jobs:
+  build-and-test:
+    if: github.ref_name == github.event.repository.default_branch && !contains( github.event.head_commit.message, 'skip ci' )
+    uses: ./.github/workflows/build-test-common.yml
+    with:
+      actor: ${{ github.actor }}
+      ref: ${{ github.ref }}
+      is_main_branch: true
+      commit: ${{ github.sha }}
+  publish:
+    runs-on: ubuntu-latest
+    needs: build-and-test
+    if: github.ref_name == github.event.repository.default_branch && !contains( github.event.head_commit.message, 'skip ci' )
+    timeout-minutes: 20
+    env:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      GH_TOKEN: ${{ secrets.GH_PA_TOKEN }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18.12.1'
+      - uses: pnpm/action-setup@v2
+        name: install pnpm
+        id: pnpm-install
+        with:
+          version: latest
+          run_install: false
+      - name: get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+      - uses: actions/cache@v3
+        name: setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+      - uses: actions/cache@v3
+        with:
+          path: |
+            node_modules
+            packages/*/node_modules
+            packages/*/dist
+          key: ${{ github.sha }}-publish
+          restore-keys: |
+            ${{ github.sha }}-test
+            ${{ github.sha }}-publish
+      - name: npm auth
+        run: |
+          echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> .npmrc
+          cp .npmrc ~/
+      - name: publish
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PA_TOKEN }}
+        run: |
+          npm run release

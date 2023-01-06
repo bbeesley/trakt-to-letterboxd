@@ -40,118 +40,119 @@ npx trakt-to-letterboxd -u username -f history.csv -w watchlist.csv
 
 #### Table of Contents
 
--   [traktHistoryToCsv](#trakthistorytocsv)
-    -   [Parameters](#parameters)
--   [headers](#headers)
--   [options](#options)
--   [mergeWatchedWithRatings](#mergewatchedwithratings)
-    -   [Parameters](#parameters-1)
--   [fetchMovies](#fetchmovies)
-    -   [Parameters](#parameters-2)
--   [defaults](#defaults)
--   [mapTraktToLetterboxd](#maptrakttoletterboxd)
-    -   [Parameters](#parameters-3)
--   [mapper](#mapper)
-    -   [Parameters](#parameters-4)
--   [schema](#schema)
--   [builder](#builder)
+*   [schema](#schema)
+*   [defaults](#defaults)
+*   [headers](#headers)
+*   [traktHistoryToCsv](#trakthistorytocsv)
+    *   [Parameters](#parameters)
+*   [options](#options)
+*   [builder](#builder)
+*   [mapTraktToLetterboxd](#maptrakttoletterboxd)
+    *   [Parameters](#parameters-1)
+*   [mergeWatchedWithRatings](#mergewatchedwithratings)
+    *   [Parameters](#parameters-2)
+*   [mapper](#mapper)
+    *   [Parameters](#parameters-3)
+*   [fetchMovies](#fetchmovies)
+    *   [Parameters](#parameters-4)
+
+### schema
+
+[src/main/exporter.ts:7-21](https://github.com/bbeesley/trakt-to-letterboxd/blob/98943fa4e5532378d7a508d8def66af182ff8d15/src/main/exporter.ts#L7-L21 "Source code on GitHub")
+
+Schema for the output csv.
+Based on <https://letterboxd.com/about/importing-data/>
+
+### defaults
+
+[src/main/mapper.ts:11-23](https://github.com/bbeesley/trakt-to-letterboxd/blob/98943fa4e5532378d7a508d8def66af182ff8d15/src/main/mapper.ts#L11-L23 "Source code on GitHub")
+
+Default values for letterboxd object shape
+
+### headers
+
+[src/main/fetcher.ts:14-18](https://github.com/bbeesley/trakt-to-letterboxd/blob/98943fa4e5532378d7a508d8def66af182ff8d15/src/main/fetcher.ts#L14-L18 "Source code on GitHub")
+
+HTTP headers to send with our request to trakt's api
 
 ### traktHistoryToCsv
 
-[src/main/index.js:21-54](https://github.com/bbeesley/trakt-to-letterboxd/blob/fe76a5344aa753ee6edf95030b6cb633368afe80/src/main/index.js#L21-L54 "Source code on GitHub")
+[src/main/index.ts:20-54](https://github.com/bbeesley/trakt-to-letterboxd/blob/98943fa4e5532378d7a508d8def66af182ff8d15/src/main/index.ts#L20-L54 "Source code on GitHub")
 
 Export a trakt user's history to csv to be uploaded to letterboxd
 
 #### Parameters
 
--   `props` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Properties passed from argv
-    -   `props.userName` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The user whose data you want to export
-    -   `props.fileName` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The name of the file to output the watchlist to
-    -   `props.watchListFileName`  
+*   `props` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Properties passed from argv
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;void>** We dont return anything
+    *   `props.userName` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The user whose data you want to export
+    *   `props.fileName` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The name of the file to output the watchlist to
+    *   `props.watchListFileName` &#x20;
 
-### headers
-
-[src/main/fetcher.js:15-19](https://github.com/bbeesley/trakt-to-letterboxd/blob/fe76a5344aa753ee6edf95030b6cb633368afe80/src/main/fetcher.js#L15-L19 "Source code on GitHub")
-
-HTTP headers to send with our request to trakt's api
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<void>** We dont return anything
 
 ### options
 
-[src/main/fetcher.js:24-26](https://github.com/bbeesley/trakt-to-letterboxd/blob/fe76a5344aa753ee6edf95030b6cb633368afe80/src/main/fetcher.js#L24-L26 "Source code on GitHub")
+[src/main/fetcher.ts:23-25](https://github.com/bbeesley/trakt-to-letterboxd/blob/98943fa4e5532378d7a508d8def66af182ff8d15/src/main/fetcher.ts#L23-L25 "Source code on GitHub")
 
 The fetch options object (only really needs headers)
 
-### mergeWatchedWithRatings
+### builder
 
-[src/main/fetcher.js:35-52](https://github.com/bbeesley/trakt-to-letterboxd/blob/fe76a5344aa753ee6edf95030b6cb633368afe80/src/main/fetcher.js#L35-L52 "Source code on GitHub")
+[src/main/exporter.ts:28-28](https://github.com/bbeesley/trakt-to-letterboxd/blob/98943fa4e5532378d7a508d8def66af182ff8d15/src/main/exporter.ts#L28-L28 "Source code on GitHub")
 
-Fetch the ratings of a user and merge them with the movie history based on the movie's Trakt ID
-
-#### Parameters
-
--   `user` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The username we're getting data for
--   `watched` **TraktMovieHistoryType** A list of movies that have been watched
-
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;TraktRatingMergedHistoryType>** Promise that resolves to Trakt movie data with merged rating
-
-### fetchMovies
-
-[src/main/fetcher.js:60-81](https://github.com/bbeesley/trakt-to-letterboxd/blob/fe76a5344aa753ee6edf95030b6cb633368afe80/src/main/fetcher.js#L60-L81 "Source code on GitHub")
-
-Fetches the user's history data from the trakt api
-
-#### Parameters
-
--   `user` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The username we're getting data for
--   `isWatchlist` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** Whether to fetch the history or the watchlist, defaults to the history (optional, default `false`)
-
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;LetterboxdHistoryEntityType>>** Promise that resolves to mapped Letterboxd data
-
-### defaults
-
-[src/main/mapper.js:12-24](https://github.com/bbeesley/trakt-to-letterboxd/blob/fe76a5344aa753ee6edf95030b6cb633368afe80/src/main/mapper.js#L12-L24 "Source code on GitHub")
-
-Default values for letterboxd object shape
+The instance of CsvBuilder we'll use to export the data.
+We need to remap the format of the last watched date to YYYY-MM-DD
+to comply with letterboxd's formatting
 
 ### mapTraktToLetterboxd
 
-[src/main/mapper.js:32-45](https://github.com/bbeesley/trakt-to-letterboxd/blob/fe76a5344aa753ee6edf95030b6cb633368afe80/src/main/mapper.js#L32-L45 "Source code on GitHub")
+[src/main/mapper.ts:31-44](https://github.com/bbeesley/trakt-to-letterboxd/blob/98943fa4e5532378d7a508d8def66af182ff8d15/src/main/mapper.ts#L31-L44 "Source code on GitHub")
 
 Maps a trakt history entry to a letterboxd history entry
 
 #### Parameters
 
--   `movie` **TraktRatingMergedHistoryEntityType** A trackt movie history entity
--   `isWatchlist` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** Whether to map the history or the watchlist, defaults to the history
+*   `movie` **TraktRatingMergedHistoryEntityType** A trackt movie history entity
+*   `isWatchlist` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** Whether to map the history or the watchlist, defaults to the history
 
 Returns **LetterboxdHistoryEntityType** A letterboxd movie history entity
 
+### mergeWatchedWithRatings
+
+[src/main/fetcher.ts:34-55](https://github.com/bbeesley/trakt-to-letterboxd/blob/98943fa4e5532378d7a508d8def66af182ff8d15/src/main/fetcher.ts#L34-L55 "Source code on GitHub")
+
+Fetch the ratings of a user and merge them with the movie history based on the movie's Trakt ID
+
+#### Parameters
+
+*   `user` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The username we're getting data for
+*   `watched` **TraktMovieHistoryType** A list of movies that have been watched
+
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<TraktRatingMergedHistoryType>** Promise that resolves to Trakt movie data with merged rating
+
 ### mapper
 
-[src/main/mapper.js:53-56](https://github.com/bbeesley/trakt-to-letterboxd/blob/fe76a5344aa753ee6edf95030b6cb633368afe80/src/main/mapper.js#L53-L56 "Source code on GitHub")
+[src/main/mapper.ts:52-58](https://github.com/bbeesley/trakt-to-letterboxd/blob/98943fa4e5532378d7a508d8def66af182ff8d15/src/main/mapper.ts#L52-L58 "Source code on GitHub")
 
 Maps an array of trakt history entries to an array of letterboxd history entities
 
 #### Parameters
 
--   `movieList` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;TraktRatingMergedHistoryEntityType>** Trakt History
--   `isWatchlist` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** Whether to map the history or the watchlist, defaults to the history (optional, default `false`)
+*   `movieList` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)\<TraktRatingMergedHistoryEntityType>** Trakt History
+*   `isWatchlist` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** Whether to map the history or the watchlist, defaults to the history (optional, default `false`)
 
-Returns **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;LetterboxdHistoryEntityType>** letterboxd history
+Returns **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)\<LetterboxdHistoryEntityType>** letterboxd history
 
-### schema
+### fetchMovies
 
-[src/main/exporter.js:8-22](https://github.com/bbeesley/trakt-to-letterboxd/blob/fe76a5344aa753ee6edf95030b6cb633368afe80/src/main/exporter.js#L8-L22 "Source code on GitHub")
+[src/main/fetcher.ts:63-88](https://github.com/bbeesley/trakt-to-letterboxd/blob/98943fa4e5532378d7a508d8def66af182ff8d15/src/main/fetcher.ts#L63-L88 "Source code on GitHub")
 
-Schema for the output csv.
-Based on <https://letterboxd.com/about/importing-data/>
+Fetches the user's history data from the trakt api
 
-### builder
+#### Parameters
 
-[src/main/exporter.js:29-29](https://github.com/bbeesley/trakt-to-letterboxd/blob/fe76a5344aa753ee6edf95030b6cb633368afe80/src/main/exporter.js#L29-L29 "Source code on GitHub")
+*   `user` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The username we're getting data for
+*   `isWatchlist` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** Whether to fetch the history or the watchlist, defaults to the history (optional, default `false`)
 
-The instance of CsvBuilder we'll use to export the data.
-We need to remap the format of the last watched date to YYYY-MM-DD
-to comply with letterboxd's formatting
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)\<LetterboxdHistoryEntityType>>** Promise that resolves to mapped Letterboxd data

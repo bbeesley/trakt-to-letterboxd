@@ -1,26 +1,25 @@
-// @flow
 import { format } from 'fecha';
 import type {
-    TraktRatingMergedHistoryType,
-    TraktRatingMergedHistoryEntityType,
-    LetterboxdHistoryEntityType,
-} from './types';
+  TraktRatingMergedHistoryType,
+  TraktRatingMergedHistoryEntityType,
+  LetterboxdHistoryEntityType,
+} from './types.js';
 
 /**
  * Default values for letterboxd object shape
  */
 const defaults = {
-    LetterboxdURI: null,
-    tmdbID: null,
-    imdbID: null,
-    Title: '',
-    Year: null,
-    Directors: null,
-    WatchedDate: null,
-    Rating: null,
-    Rating10: null,
-    Tags: null,
-    Review: null,
+  LetterboxdURI: null,
+  tmdbID: null,
+  imdbID: null,
+  Title: '',
+  Year: null,
+  Directors: null,
+  WatchedDate: null,
+  Rating: null,
+  Rating10: null,
+  Tags: null,
+  Review: null,
 };
 
 /**
@@ -30,18 +29,18 @@ const defaults = {
  * @return  {LetterboxdHistoryEntityType}       A letterboxd movie history entity
  */
 const mapTraktToLetterboxd = (
-    movie: TraktRatingMergedHistoryEntityType,
-    isWatchlist?: boolean,
+  movie: TraktRatingMergedHistoryEntityType,
+  isWatchlist?: boolean,
 ): LetterboxdHistoryEntityType => ({
-    ...defaults,
-    tmdbID: movie.movie.ids.tmdb,
-    imdbID: movie.movie.ids.imdb,
-    Title: movie.movie.title,
-    Year: movie.movie.year,
-    Rating10: movie.rating,
-    WatchedDate: isWatchlist
-        ? undefined
-        : format(new Date(movie.last_watched_at), 'YYYY-MM-DD'),
+  ...defaults,
+  tmdbID: movie.movie.ids.tmdb,
+  imdbID: movie.movie.ids.imdb,
+  Title: movie.movie.title,
+  Year: movie.movie.year,
+  Rating10: movie.rating,
+  WatchedDate: isWatchlist
+    ? null
+    : format(new Date(movie.last_watched_at), 'YYYY-MM-DD'),
 });
 
 /**
@@ -51,8 +50,11 @@ const mapTraktToLetterboxd = (
  * @return  {Array<LetterboxdHistoryEntityType>}            letterboxd history
  */
 const mapper = (
-    movieList: TraktRatingMergedHistoryType,
-    isWatchlist: boolean = false,
-): Array<LetterboxdHistoryEntityType> => movieList.map((val: TraktRatingMergedHistoryEntityType) => mapTraktToLetterboxd(val, isWatchlist));
+  movieList: TraktRatingMergedHistoryType,
+  isWatchlist = false,
+): LetterboxdHistoryEntityType[] =>
+  movieList.map((value: TraktRatingMergedHistoryEntityType) =>
+    mapTraktToLetterboxd(value, isWatchlist),
+  );
 
 export default mapper;

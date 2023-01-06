@@ -1,9 +1,0 @@
-[libs]
-flow-typed/
-
-[ignore]
-dist/
-
-[options]
-suppress_type=$FlowIssue
-module.name_mapper='.*\(.css\)' -> 'empty/object'

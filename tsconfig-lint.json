@@ -1,0 +1,26 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "types": ["node"],
+    "checkJs": false
+  },
+  "include": [
+    "**/*.ts",
+    "**/.*.ts",
+    "**/*.js",
+    "**/*.mjs",
+    "**/*.cjs",
+    "**/.*.js",
+    "**/.*.mjs",
+    "**/.*.cjs",
+    "*.js",
+    "*.mjs",
+    "*.cjs",
+    ".*.js",
+    ".*.mjs",
+    ".*.cjs",
+    "*.ts",
+    ".*.ts"
+  ],
+  "exclude": []
+}
