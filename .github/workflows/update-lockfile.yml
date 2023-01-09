@@ -18,8 +18,8 @@ jobs:
         ref: ${{ github.event.pull_request.head.ref }}
     - run: pnpm i --lockfile-only
     - run: |
-        git config --global user.name github-actions[bot]
-        git config --global user.email github-actions[bot]@users.noreply.github.com
+        git config --global user.name dependabot[bot]
+        git config --global user.email dependabot[bot]@users.noreply.github.com
         git add pnpm-lock.yaml
         git commit -m "chore(deps): update pnpm-lock.yaml"
         git push
