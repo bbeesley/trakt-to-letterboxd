@@ -1,5 +1,5 @@
 # https://github.com/dependabot/dependabot-core/issues/1736
-name: Dependabot
+name: Update Lockfile Post Dependabot
 on: pull_request_target
 permissions: read-all
 jobs:
