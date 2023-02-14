@@ -65,7 +65,7 @@
     "cz-conventional-changelog": "^3.3.0",
     "delay": "^5.0.0",
     "documentation": "^14.0.1",
-    "execa": "^6.1.0",
+    "execa": "^7.0.0",
     "husky": "^8.0.3",
     "nock": "^13.2.9",
     "npm-check-updates": "^16.6.2",
