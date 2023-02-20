@@ -13,7 +13,7 @@ jobs:
     steps:
       - id: automerge
         name: automerge
-        uses: "pascalgn/automerge-action@v0.15.5"
+        uses: "pascalgn/automerge-action@v0.15.6"
         if: github.actor != 'dependabot[bot]'
         env:
           GITHUB_TOKEN: "${{ secrets.GH_PA_TOKEN }}"
