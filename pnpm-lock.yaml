@@ -12,7 +12,7 @@ specifiers:
   '@semantic-release/commit-analyzer': ^9.0.2
   '@semantic-release/git': ^10.0.1
   '@semantic-release/github': ^8.0.7
-  '@semantic-release/npm': ^9.0.1
+  '@semantic-release/npm': ^10.0.2
   '@semantic-release/release-notes-generator': ^10.0.3
   '@types/node': ^18.11.18
   '@types/sinon': ^10.0.13
@@ -58,7 +58,7 @@ devDependencies:
   '@semantic-release/commit-analyzer': 9.0.2_semantic-release@20.0.2
   '@semantic-release/git': 10.0.1_semantic-release@20.0.2
   '@semantic-release/github': 8.0.7_semantic-release@20.0.2
-  '@semantic-release/npm': 9.0.1_semantic-release@20.0.2
+  '@semantic-release/npm': 10.0.2_semantic-release@20.0.2
   '@semantic-release/release-notes-generator': 10.0.3_semantic-release@20.0.2
   '@types/node': 18.11.18
   '@types/sinon': 10.0.13
@@ -1888,6 +1888,28 @@ packages:
     transitivePeerDependencies:
       - encoding
       - supports-color
+    dev: true
+
+  /@semantic-release/npm/10.0.2_semantic-release@20.0.2:
+    resolution: {integrity: sha512-Mo0XoBza4pUapxiBhLLYXeSZ9tkuHDUd/WvMbpilwuPRfJDnQXMqx5tBVon8d2mBk8JXmXpqB+ExhlWJmVT40A==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      semantic-release: '>=20.1.0'
+    dependencies:
+      '@semantic-release/error': 3.0.0
+      aggregate-error: 4.0.1
+      execa: 7.0.0
+      fs-extra: 11.1.0
+      lodash-es: 4.17.21
+      nerf-dart: 1.0.0
+      normalize-url: 8.0.0
+      npm: 9.6.2
+      rc: 1.2.8
+      read-pkg: 7.1.0
+      registry-auth-token: 5.0.1
+      semantic-release: 20.0.2
+      semver: 7.3.8
+      tempy: 3.0.0
     dev: true
 
   /@semantic-release/npm/9.0.1_semantic-release@20.0.2:
@@ -7246,6 +7268,79 @@ packages:
       - which
       - write-file-atomic
 
+  /npm/9.6.2:
+    resolution: {integrity: sha512-TnXoXhlFkH/9wI4+aXSq0aPLwKG7Ge17t1ME4/rQt+0DZWQCRk9PwhBuX/shqdUiHeKicSLSkzWx+QZgTRE+/A==}
+    engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
+    hasBin: true
+    dev: true
+    bundledDependencies:
+      - '@isaacs/string-locale-compare'
+      - '@npmcli/arborist'
+      - '@npmcli/config'
+      - '@npmcli/map-workspaces'
+      - '@npmcli/package-json'
+      - '@npmcli/run-script'
+      - abbrev
+      - archy
+      - cacache
+      - chalk
+      - ci-info
+      - cli-columns
+      - cli-table3
+      - columnify
+      - fastest-levenshtein
+      - fs-minipass
+      - glob
+      - graceful-fs
+      - hosted-git-info
+      - ini
+      - init-package-json
+      - is-cidr
+      - json-parse-even-better-errors
+      - libnpmaccess
+      - libnpmdiff
+      - libnpmexec
+      - libnpmfund
+      - libnpmhook
+      - libnpmorg
+      - libnpmpack
+      - libnpmpublish
+      - libnpmsearch
+      - libnpmteam
+      - libnpmversion
+      - make-fetch-happen
+      - minimatch
+      - minipass
+      - minipass-pipeline
+      - ms
+      - node-gyp
+      - nopt
+      - npm-audit-report
+      - npm-install-checks
+      - npm-package-arg
+      - npm-pick-manifest
+      - npm-profile
+      - npm-registry-fetch
+      - npm-user-validate
+      - npmlog
+      - p-map
+      - pacote
+      - parse-conflict-json
+      - proc-log
+      - qrcode-terminal
+      - read
+      - read-package-json
+      - read-package-json-fast
+      - semver
+      - ssri
+      - tar
+      - text-table
+      - tiny-relative-date
+      - treeverse
+      - validate-npm-package-name
+      - which
+      - write-file-atomic
+
   /npmlog/6.0.2:
     resolution: {integrity: sha512-/vBvz5Jfr9dT/aFWd0FIRf+T/Q2WBsLENygUaFUqstqsycmZAP/t5BvFJTK0viFmSUxiUKTUplWy5vt+rvKIxg==}
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
@@ -8856,6 +8951,16 @@ packages:
       temp-dir: 2.0.0
       type-fest: 0.16.0
       unique-string: 2.0.0
+    dev: true
+
+  /tempy/3.0.0:
+    resolution: {integrity: sha512-B2I9X7+o2wOaW4r/CWMkpOO9mdiTRCxXNgob6iGvPmfPWgH/KyUD6Uy5crtWBxIBe3YrNZKR2lSzv1JJKWD4vA==}
+    engines: {node: '>=14.16'}
+    dependencies:
+      is-stream: 3.0.0
+      temp-dir: 2.0.0
+      type-fest: 2.19.0
+      unique-string: 3.0.0
     dev: true
 
   /terser-webpack-plugin/5.3.6_webpack@5.75.0:
