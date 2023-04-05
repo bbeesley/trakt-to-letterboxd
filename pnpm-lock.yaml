@@ -5,7 +5,7 @@ specifiers:
   '@babel/core': ^7.20.12
   '@babel/preset-env': ^7.20.2
   '@babel/preset-typescript': ^7.18.6
-  '@beesley/tsconfig': ^1.1.4
+  '@beesley/tsconfig': ^2.0.0
   '@commitlint/cli': ^17.4.0
   '@commitlint/config-conventional': ^17.4.0
   '@semantic-release/changelog': ^6.0.2
@@ -51,7 +51,7 @@ devDependencies:
   '@babel/core': 7.20.12
   '@babel/preset-env': 7.20.2_@babel+core@7.20.12
   '@babel/preset-typescript': 7.18.6_@babel+core@7.20.12
-  '@beesley/tsconfig': 1.1.4
+  '@beesley/tsconfig': 2.0.0
   '@commitlint/cli': 17.4.0_@types+node@18.11.18
   '@commitlint/config-conventional': 17.4.0
   '@semantic-release/changelog': 6.0.2_semantic-release@21.0.0
@@ -1289,8 +1289,8 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@beesley/tsconfig/1.1.4:
-    resolution: {integrity: sha512-LK2rH+oaDMXLeoUZkNbU8b5oJGZNQtWr2osyy0O4uvt2plLNRvcevrrtNgU4zXqb3rPEHuA/dkXZogNXAl+8CA==}
+  /@beesley/tsconfig/2.0.0:
+    resolution: {integrity: sha512-EE2cfB8MQVxFVIFicEsY3ufFwOZSJnjKKlq6Dt1rQcmziexGibrCSupech+rQ/Y49m0VdX0mI0aRE97oIlwc8Q==}
     dev: true
 
   /@colors/colors/1.5.0:
