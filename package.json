@@ -57,7 +57,7 @@
     "@semantic-release/github": "^8.0.7",
     "@semantic-release/npm": "^10.0.2",
     "@semantic-release/release-notes-generator": "^10.0.3",
-    "@types/node": "^18.11.18",
+    "@types/node": "^20.0.0",
     "@types/sinon": "^10.0.13",
     "ava": "^5.1.0",
     "babel-plugin-replace-import-extension": "^1.1.3",

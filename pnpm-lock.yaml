@@ -14,7 +14,7 @@ specifiers:
   '@semantic-release/github': ^8.0.7
   '@semantic-release/npm': ^10.0.2
   '@semantic-release/release-notes-generator': ^10.0.3
-  '@types/node': ^18.11.18
+  '@types/node': ^20.0.0
   '@types/sinon': ^10.0.13
   ava: ^5.1.0
   babel-plugin-replace-import-extension: ^1.1.3
@@ -52,7 +52,7 @@ devDependencies:
   '@babel/preset-env': 7.20.2_@babel+core@7.20.12
   '@babel/preset-typescript': 7.18.6_@babel+core@7.20.12
   '@beesley/tsconfig': 1.1.4
-  '@commitlint/cli': 17.4.0_@types+node@18.11.18
+  '@commitlint/cli': 17.4.0_@types+node@20.0.0
   '@commitlint/config-conventional': 17.4.0
   '@semantic-release/changelog': 6.0.2_semantic-release@21.0.0
   '@semantic-release/commit-analyzer': 9.0.2_semantic-release@21.0.0
@@ -60,12 +60,12 @@ devDependencies:
   '@semantic-release/github': 8.0.7_semantic-release@21.0.0
   '@semantic-release/npm': 10.0.2_semantic-release@21.0.0
   '@semantic-release/release-notes-generator': 10.0.3_semantic-release@21.0.0
-  '@types/node': 18.11.18
+  '@types/node': 20.0.0
   '@types/sinon': 10.0.13
   ava: 5.1.0
   babel-plugin-replace-import-extension: 1.1.3
   conventional-changelog-angular: 5.0.13
-  cz-conventional-changelog: 3.3.0_@types+node@18.11.18
+  cz-conventional-changelog: 3.3.0_@types+node@20.0.0
   delay: 5.0.0
   documentation: 14.0.1
   execa: 7.0.0
@@ -75,7 +75,7 @@ devDependencies:
   npm-run-all: 4.1.5
   semantic-release: 21.0.0
   sinon: 15.0.1
-  ts-node: 10.9.1_awa2wsr5thmg3i7jqycphctjfq
+  ts-node: 10.9.1_lweyl4lhelld3mhveoops5zre4
   typescript: 4.9.4
   webpack: 5.75.0
   xo: 0.53.1_webpack@5.75.0
@@ -1300,14 +1300,14 @@ packages:
     dev: true
     optional: true
 
-  /@commitlint/cli/17.4.0_@types+node@18.11.18:
+  /@commitlint/cli/17.4.0_@types+node@20.0.0:
     resolution: {integrity: sha512-SEY4sYe8yVlgxPP7X0wJb96DBAGBPsCsy6QbqJt/UECbIAjDeDV5xXBV4jnS7T/qMC10sk6Ub9kDhEX0VWvblw==}
     engines: {node: '>=v14'}
     hasBin: true
     dependencies:
       '@commitlint/format': 17.4.0
       '@commitlint/lint': 17.4.0
-      '@commitlint/load': 17.4.0_@types+node@18.11.18
+      '@commitlint/load': 17.4.0_@types+node@20.0.0
       '@commitlint/read': 17.4.0
       '@commitlint/types': 17.4.0
       execa: 5.1.1
@@ -1379,7 +1379,7 @@ packages:
       '@commitlint/types': 17.4.0
     dev: true
 
-  /@commitlint/load/17.4.0_@types+node@18.11.18:
+  /@commitlint/load/17.4.0_@types+node@20.0.0:
     resolution: {integrity: sha512-wDKNvAJqukqZqKmhRlf3KNo/12QGo1AQcd80EbV01SxtGvyHOsJ/g+/IbrZpopZv8rvzmEVktcpfDYH6ITepFA==}
     engines: {node: '>=v14'}
     dependencies:
@@ -1389,12 +1389,12 @@ packages:
       '@commitlint/types': 17.4.0
       chalk: 4.1.2
       cosmiconfig: 8.0.0
-      cosmiconfig-typescript-loader: 4.3.0_bxtyj3et3xbsdyxhh3oblnfbj4
+      cosmiconfig-typescript-loader: 4.3.0_jdnbl5d5jhwlc7k2zz6bpbsbdm
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
       resolve-from: 5.0.0
-      ts-node: 10.9.1_awa2wsr5thmg3i7jqycphctjfq
+      ts-node: 10.9.1_lweyl4lhelld3mhveoops5zre4
       typescript: 4.9.4
     transitivePeerDependencies:
       - '@swc/core'
@@ -2069,8 +2069,8 @@ packages:
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
     dev: false
 
-  /@types/node/18.11.18:
-    resolution: {integrity: sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==}
+  /@types/node/20.0.0:
+    resolution: {integrity: sha512-cD2uPTDnQQCVpmRefonO98/PPijuOnnEy5oytWJFPY1N9aJCz2wJ5kSGWO+zJoed2cY2JxQh6yBuUq4vIn61hw==}
     dev: true
 
   /@types/normalize-package-data/2.4.1:
@@ -3227,13 +3227,13 @@ packages:
     engines: {node: ^12.20.0 || >=14}
     dev: true
 
-  /commitizen/4.2.6_@types+node@18.11.18:
+  /commitizen/4.2.6_@types+node@20.0.0:
     resolution: {integrity: sha512-RyTM+EiD9GO01DJUn9MRRAet3XUHGfoUZoksLfr+1ym1Xt2q5EYJs9Fg2BtKSb5Mo53i0BtMBmWMHQXVlZ/L9w==}
     engines: {node: '>= 12'}
     hasBin: true
     dependencies:
       cachedir: 2.3.0
-      cz-conventional-changelog: 3.3.0_@types+node@18.11.18
+      cz-conventional-changelog: 3.3.0_@types+node@20.0.0
       dedent: 0.7.0
       detect-indent: 6.1.0
       find-node-modules: 2.1.3
@@ -3384,7 +3384,7 @@ packages:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
     dev: true
 
-  /cosmiconfig-typescript-loader/4.3.0_bxtyj3et3xbsdyxhh3oblnfbj4:
+  /cosmiconfig-typescript-loader/4.3.0_jdnbl5d5jhwlc7k2zz6bpbsbdm:
     resolution: {integrity: sha512-NTxV1MFfZDLPiBMjxbHRwSh5LaLcPMwNdCutmnHJCKoVnlvldPWlllonKwrsRJ5pYZBIBGRWWU2tfvzxgeSW5Q==}
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
@@ -3393,9 +3393,9 @@ packages:
       ts-node: '>=10'
       typescript: '>=3'
     dependencies:
-      '@types/node': 18.11.18
+      '@types/node': 20.0.0
       cosmiconfig: 8.0.0
-      ts-node: 10.9.1_awa2wsr5thmg3i7jqycphctjfq
+      ts-node: 10.9.1_lweyl4lhelld3mhveoops5zre4
       typescript: 4.9.4
     dev: true
 
@@ -3465,18 +3465,18 @@ packages:
       array-find-index: 1.0.2
     dev: true
 
-  /cz-conventional-changelog/3.3.0_@types+node@18.11.18:
+  /cz-conventional-changelog/3.3.0_@types+node@20.0.0:
     resolution: {integrity: sha512-U466fIzU5U22eES5lTNiNbZ+d8dfcHcssH4o7QsdWaCcRs/feIPCxKYSWkYBNs5mny7MvEfwpTLWjvbm94hecw==}
     engines: {node: '>= 10'}
     dependencies:
       chalk: 2.4.2
-      commitizen: 4.2.6_@types+node@18.11.18
+      commitizen: 4.2.6_@types+node@20.0.0
       conventional-commit-types: 3.0.0
       lodash.map: 4.6.0
       longest: 2.0.1
       word-wrap: 1.2.3
     optionalDependencies:
-      '@commitlint/load': 17.4.0_@types+node@18.11.18
+      '@commitlint/load': 17.4.0_@types+node@20.0.0
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
@@ -5679,7 +5679,7 @@ packages:
     resolution: {integrity: sha512-7vuh85V5cdDofPyxn58nrPjBktZo0u9x1g8WtjQol+jZDaE+fhN+cIvTj11GndBnMnyfrUOG1sZQxCdjKh+DKg==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 18.11.18
+      '@types/node': 20.0.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
     dev: true
@@ -8924,7 +8924,7 @@ packages:
     resolution: {integrity: sha512-AqTiAOLcj85xS7vQ8QkAV41hPDIJ71XJB4RCUrzo/1GM2CQwhkJGaf9Hgr7BOugMRpgGUrqRg/DrBDl4H40+8g==}
     dev: true
 
-  /ts-node/10.9.1_awa2wsr5thmg3i7jqycphctjfq:
+  /ts-node/10.9.1_lweyl4lhelld3mhveoops5zre4:
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
     peerDependencies:
@@ -8943,7 +8943,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.3
-      '@types/node': 18.11.18
+      '@types/node': 20.0.0
       acorn: 8.8.1
       acorn-walk: 8.2.0
       arg: 4.1.3
