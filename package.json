@@ -61,7 +61,7 @@
     "@types/sinon": "^10.0.13",
     "ava": "^5.1.0",
     "babel-plugin-replace-import-extension": "^1.1.3",
-    "conventional-changelog-angular": "^5.0.13",
+    "conventional-changelog-angular": "^6.0.0",
     "cz-conventional-changelog": "^3.3.0",
     "delay": "^5.0.0",
     "documentation": "^14.0.1",
