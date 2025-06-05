@@ -1,5 +1,5 @@
 const config = {
-  clientId: 'f1764c25042634763876ff52959141f0a981932b21df6759cbe1fa5a05a667b0',
+  clientId: 'b2a2c1376be94a7e779c495f9826918beadc8e0c05dc8c50a0db04a2801895ad',
 };
 
 export default config;
