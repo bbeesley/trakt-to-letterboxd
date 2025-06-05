@@ -27,7 +27,7 @@ jobs:
         name: setup node
         with:
           node-version: '18.12.1'
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v4
         name: install pnpm
         id: pnpm-install
         with:
