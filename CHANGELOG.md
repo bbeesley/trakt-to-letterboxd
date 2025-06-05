@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/bbeesley/trakt-to-letterboxd/compare/v1.1.1...v1.1.2) (2025-06-05)
+
+
+### Bug Fixes
+
+* update api client id ([f03af37](https://github.com/bbeesley/trakt-to-letterboxd/commit/f03af37b3c186024372451965635eb255b31f280))
+
 ## [1.1.1](https://github.com/bbeesley/trakt-to-letterboxd/compare/v1.1.0...v1.1.1) (2023-01-06)
 
 

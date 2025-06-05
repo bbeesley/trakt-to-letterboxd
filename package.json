@@ -1,6 +1,6 @@
 {
   "name": "trakt-to-letterboxd",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Extract trakt movie history and export to csv for uploading to letterboxd",
   "repository": "git@github.com:bbeesley/trakt-to-letterboxd.git",
   "author": "Bill Beesley <bbeesley@me.com>",
