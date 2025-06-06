@@ -22,7 +22,7 @@ specifiers:
   conventional-changelog-angular: ^5.0.13
   csv-builder: ^1.0.1
   cz-conventional-changelog: ^3.3.0
-  delay: ^5.0.0
+  delay: ^6.0.0
   documentation: ^14.0.1
   execa: ^7.0.0
   fecha: ^4.2.3
@@ -66,7 +66,7 @@ devDependencies:
   babel-plugin-replace-import-extension: 1.1.3
   conventional-changelog-angular: 5.0.13
   cz-conventional-changelog: 3.3.0_@types+node@18.11.18
-  delay: 5.0.0
+  delay: 6.0.0
   documentation: 14.0.1
   execa: 7.0.0
   husky: 8.0.3
@@ -3630,9 +3630,9 @@ packages:
       slash: 4.0.0
     dev: true
 
-  /delay/5.0.0:
-    resolution: {integrity: sha512-ReEBKkIfe4ya47wlPYf/gu5ib6yUG0/Aez0JQZQz94kiWtRQvZIQbTiehsnwHvLSWJnQdhVeqYue7Id1dKr0qw==}
-    engines: {node: '>=10'}
+  /delay/6.0.0:
+    resolution: {integrity: sha512-2NJozoOHQ4NuZuVIr5CWd0iiLVIRSDepakaovIN+9eIDHEhdCAEvSy2cuf1DCrPPQLvHmbqTHODlhHg8UCy4zw==}
+    engines: {node: '>=16'}
     dev: true
 
   /delegates/1.0.0:
